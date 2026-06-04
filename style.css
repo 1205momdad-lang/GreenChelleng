@@ -180,3 +180,147 @@ footer { text-align: center; padding: 30px; color: var(--text-muted); font-size:
 @keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 10px rgba(6, 182, 212, 0.2); } 50% { box-shadow: 0 0 20px rgba(6, 182, 212, 0.5); } }
 @keyframes petFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
 .btn-action-sm { margin-top: 10px; background: rgba(6, 182, 212, 0.2); border: 1px solid var(--accent-blue); color: var(--text-light); padding: 4px 10px; font-size: 0.75rem; border-radius: 6px; cursor: pointer; }
+
+/* ================= 手機版響應式設計 ================= */
+@media (max-width: 480px) {
+
+    /* 導覽列：改為漢堡選單 */
+    .navbar {
+        padding: 15px 20px;
+        position: relative;
+        flex-wrap: wrap;
+    }
+    .navbar .logo {
+        font-size: 1.2rem;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+        gap: 8px;
+        padding-bottom: 10px;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .nav-btn {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 12px 16px;
+        font-size: 0.95rem;
+        border-radius: 12px;
+        background: rgba(255,255,255,0.04);
+    }
+    .theme-toggle-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 12px;
+    }
+
+    /* 漢堡按鈕 */
+    .hamburger-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 6px;
+    }
+    .hamburger-btn span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--text-light);
+        border-radius: 2px;
+        transition: all 0.3s;
+    }
+
+    /* 容器與間距 */
+    .container {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    /* 首頁標題 */
+    .welcome-box h1 {
+        font-size: 1.6rem;
+    }
+    .welcome-box p {
+        font-size: 0.9rem;
+    }
+
+    /* 兩欄改單欄 */
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* 卡片 */
+    .card {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    /* 首頁勳章並排 */
+    .home-badges-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* 成就牆格子 */
+    .wall-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    /* 任務卡片 */
+    .task-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px;
+    }
+    .task-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    /* 頁面標題 */
+    .page-header h2 {
+        font-size: 1.5rem;
+    }
+
+    /* 圖表 */
+    .chart-container {
+        height: 200px;
+    }
+
+    /* 表格 */
+    th, td {
+        padding: 10px 8px;
+        font-size: 0.8rem;
+    }
+
+    /* 海龜寵物位置 */
+    .pet-container {
+        bottom: 15px;
+        right: 15px;
+    }
+    .pet-avatar {
+        font-size: 2.5rem;
+    }
+    .pet-dialog {
+        font-size: 0.8rem;
+        max-width: 160px;
+        padding: 8px 12px;
+    }
+
+    /* footer */
+    footer {
+        font-size: 0.78rem;
+        padding: 20px 15px;
+    }
+}
