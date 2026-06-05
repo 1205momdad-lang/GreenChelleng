@@ -10,14 +10,11 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
-<body class="light-theme"> <canvas id="particle-canvas"></canvas>
+<body class="dark-theme"> <canvas id="particle-canvas"></canvas>
 
     <div class="bg-glow glow-1"></div>
     <div class="bg-glow glow-2"></div>
 
-    <button class="hamburger-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-    <span></span><span></span><span></span>
-    </button>
     <nav class="navbar">
         <div class="logo">
             <i class="fa-solid fa-leaf text-gradient"></i> GreenChallenge
@@ -30,14 +27,14 @@
             <button class="nav-btn" onclick="switchPage('dashboard')"><i class="fa-solid fa-chart-pie"></i> 數據儀表板</button>
             
             <button class="theme-toggle-btn" onclick="toggleTheme()" id="theme-btn">
-                <i class="fa-solid fa-sun"></i> <span id="theme-text">夜晚模式</span>
+                <i class="fa-solid fa-sun"></i> <span id="theme-text">白天模式</span>
             </button>
         </div>
     </nav>
 
     <main class="container">
         
-        <section id="home" class="page active">
+        <section id="home" class="page">
             <div class="welcome-box">
                 <h1>歡迎來到 <span class="text-gradient">GreenChallenge</span></h1>
                 <p>將氣候行動轉化為好玩的網頁遊戲，讓我們一起為 SDG 13 做出貢獻！</p>
@@ -98,7 +95,7 @@
             <div id="tasks-list" class="tasks-container"></div>
         </section>
 
-        <section id="calculator" class="page">
+        <section id="calculator" class="page active">
             <div class="page-header">
                 <h2><i class="fa-solid fa-calculator text-gradient"></i> 碳足跡隨手算</h2>
                 <p>輸入你今天的交通與飲食習慣，快速算算你製造了多少碳排放吧！</p>
