@@ -15,6 +15,9 @@
     <div class="bg-glow glow-1"></div>
     <div class="bg-glow glow-2"></div>
 
+    <button class="hamburger-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+    <span></span><span></span><span></span>
+    </button>
     <nav class="navbar">
         <div class="logo">
             <i class="fa-solid fa-leaf text-gradient"></i> GreenChallenge
@@ -34,7 +37,7 @@
 
     <main class="container">
         
-        <section id="home" class="page">
+        <section id="home" class="page active">
             <div class="welcome-box">
                 <h1>歡迎來到 <span class="text-gradient">GreenChallenge</span></h1>
                 <p>將氣候行動轉化為好玩的網頁遊戲，讓我們一起為 SDG 13 做出貢獻！</p>
@@ -200,7 +203,7 @@
             </div>
         </section>
 
-        <section id="dashboard" class="page active">
+        <section id="dashboard" class="page">
             <div class="page-header">
                 <h2><i class="fa-solid fa-chart-line text-gradient"></i> 數據視覺化儀表板</h2>
                 <p>將無形的減碳行為轉化為具體的成就數字，全面追蹤你的環保軌跡。</p>
